@@ -1,0 +1,146 @@
+/* CREATE TABLE person(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+  	name VARCHAR(100),
+  	age INTEGER,
+  	height INTEGER,
+  	city VARCHAR(100),
+  	favorite_color VARCHAR(50)
+) */
+
+/* INSERT INTO person (name, age, height, city, favorite_color)
+VALUES ('Ray', 22, 158, 'Denton', 'purple'), 
+('Alexia', 25, 165, 'Dallas', 'green'), 
+('Max', 22, 180, 'Arlington', 'pink'),
+('Joanie', 28, 169, 'Hurst', 'purple'),
+('Robert', 21, 185, 'Arlington', 'white');
+ */
+ 
+/*  SELECT * FROM person; */
+ 
+/*  SELECT * FROM person
+ ORDER BY height desc; */
+ 
+/*  SELECT * FROM person
+ ORDER BY height asc; */
+ 
+/*  SELECT * from person
+ ORDER BY age desc; */
+ 
+/*  SELECT * from person
+ WHERE age > 20; */
+ 
+/*  SELECT * from person
+ WHERE age = 18; */
+ 
+ 
+/*  SELECT * from person
+ WHERE age > 30 
+ OR age < 20; */
+ 
+/*  SELECT * FROM person
+ WHERE age != 27; */
+ 
+/*  SELECT * FROM person
+ WHERE favorite_color != 'red'; */
+ 
+ 
+/*  SELECT * FROM person
+ WHERE favorite_color != 'red'
+AND favorite_color!='blue'; */
+
+/* SELECT * FROM person
+WHERE favorite_color ='orange'
+OR favorite_color = 'green'; */
+
+/* SELECT * FROM person
+WHERE favorite_color IN ('orange', 'green', 'blue') */
+
+/* SELECT * FROM person
+WHERE favorite_color IN ('yellow', 'purple') */
+
+
+
+/* 
+ CREATE TABLE orders (
+ 	person_id INTEGER ,
+   product_name VARCHAR(100),
+   product_price FLOAT,
+   quantity INTEGER
+ )
+  */
+
+ 
+/*  INSERT INTO orders (person_id, product_name, product_price, quantity)
+ VALUES (1, 'Swiffer', 7.99, 2),
+ (1, 'Broom', 5.99, 1), (2, 'Burrito', '2.99', 4) */
+
+/* SELECT * FROM orders; */
+
+/* SELECT SUM(quantity) FROM orders */
+
+/* SELECT SUM(product_price) FROM orders */
+
+/* SELECT SUM(product_price) FROM orders
+WHERE person_id=1; */
+
+/* SELECT * from Artist */
+
+/* INSERT INTO Artist (ArtistId, Name)
+VALUES (276, 'Blue October'), (277, 'The Wombats'); */
+
+/* SELECT * FROM Artist 
+ORDER BY Name desc
+LIMIT 10;  */
+
+/* SELECT * FROM Artist
+WHERE Name LIKE 'Black%'; */
+
+/* SELECT * FROM Artist
+WHERE Name LIKE '%Black%'; */
+
+
+/* SELECT FirstName, LastName FROM Employee
+WHERE City = 'Calgary'; */
+
+/* SELECT FirstName, LastName, BirthDate FROM Employee
+ORDER BY BirthDate desc
+LIMIT 1; */
+
+/* SELECT FirstName, LastName, BirthDate FROM Employee
+ORDER BY BirthDate asc
+LIMIT 1; */
+
+/* SELECT * FROM Employee; */
+
+/* SELECT * FROM Employee
+WHERE ReportsTo = 2; */
+
+/* SELECT COUNT(*) FROM Employee
+WHERE City='Lethbridge' */
+
+
+/* SELECT * FROM Invoice; */
+
+/* SELECT COUNT(*) FROM Invoice
+WHERE BillingCountry='USA */
+
+/* SELECT Total FROM Invoice
+ORDER BY Total desc
+LIMIT 1; */
+
+/* SELECT Total FROM Invoice
+ORDER BY Total
+LIMIT 1; */
+
+/* SELECT COUNT(*) FROM Invoice
+WHERE TOTAL > 5; */
+
+/* SELECT COUNT(*) FROM Invoice
+WHERE TOTAL < 5; */
+
+/* SELECT COUNT(*) FROM Invoice
+WHERE BillingState IN ('TX', 'AZ', 'CA'); */
+
+/* SELECT AVG(Total) FROM Invoice; */
+
+/* SELECT SUM(Total) FROM Invoice; */
